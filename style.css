@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  display: flex;
+}
+
+nav {
+  width: 250px;
+  background: #005BAC;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  width: 100%;
+}
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: #FF6B35;
+}
+
+nav ul li a i {
+  margin-right: 10px;
+}
+
+nav ul li .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav ul li .logo img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.main {
+  margin-left: 250px;
+  padding: 20px;
+  flex: 1;
+  background: #F3F7FA;
+  min-height: 100vh;
+}
+
+.main-top h1 {
+  color: #005BAC;
+  margin-bottom: 10px;
+}
+
+.main-top p {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.users {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.card p {
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.card .per table {
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.card button {
+  background: #FF6B35;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #E14A2C;
+}
+
+.attendance {
+  margin-top: 40px;
+}
+
+.attendance-list {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.attendance-list h1 {
+  margin-bottom: 20px;
+  color: #005BAC;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  background: #FFA500;
+  color: white;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:hover {
+  background: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: 200px;
+  }
+
+  .main {
+    margin-left: 200px;
+  }
+
+  .users {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 90%;
+  }
+}
